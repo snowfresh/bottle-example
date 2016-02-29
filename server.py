@@ -13,7 +13,7 @@ def index():
   return bottle.static_file('index.html', '.')
   
 @APP.route('/greet/<name>')
-def greet(name):
+def greet(salutation, name):
   return 'hellow %s %s' % (salutation, name)
 
 if __name__ == '__main__':
