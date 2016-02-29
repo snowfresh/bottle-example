@@ -8,8 +8,9 @@ def index():
   return '<p>Hello</p>'
   
 @APP.route('/hello')
-def myjunk():
-  return random.randint(0, 10)
+def index():
+  bottle.response.content_type = 'text/html'
+  return bottle.static_file('index.html', '.')
 
 if __name__ == '__main__':
   bottle.run(application=APP)
